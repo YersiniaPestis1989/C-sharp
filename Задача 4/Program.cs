@@ -1,0 +1,17 @@
+﻿Console.Write("Введите первое число ");
+string number1 = Console.ReadLine();
+Console.Clear();
+Console.Write("Введите второе число ");
+string number2 = Console.ReadLine();
+Console.Clear();
+Console.Write("Введите третье число ");
+string number3 = Console.ReadLine();
+Console.Clear();
+int one = Int32.Parse(number1);
+int two = Int32.Parse(number2);
+int three = Int32.Parse(number3);
+int max = one;
+if(one > max) max = one;
+if(two > max) max = two;
+if(three > max) max = three;
+Console.Write("Максимальное число " + max);
