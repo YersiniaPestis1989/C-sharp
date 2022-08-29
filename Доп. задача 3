@@ -1,0 +1,68 @@
+// Добавить новые команды
+Console.Write("Введите пароль: ");
+string password = Console.ReadLine();
+Console.Clear();
+int i = 0;
+while (password != "exit") 
+{
+    Console.WriteLine("Попытка "+ (i+1));
+    i++;
+    Console.Write("Введите ВЕРНЫЙ пароль, чтобы прекратить: ");
+    password = Console.ReadLine();
+    Console.Clear();
+}
+
+Console.Write("Поздравляем, вы покинули колесо сансары! ");
+Console.Write("Введите имя: ");
+string Name = Console.ReadLine();
+Console.Clear();
+Console.Write(Name + ", чтобы ввести новую команду, повторите пароль ");
+string password2 = Console.ReadLine();
+Console.Clear();
+
+while (password2 == "exit")
+{
+Console.Write("Введите команду: ");
+string command = Console.ReadLine();
+
+if(command == "SetName")
+{
+    Console.Write("Введите имя ");
+    
+    Console.Clear();
+    Console.Write("Привет, " + Name);
+    
+}
+else if(command == "Help")
+{
+    Console.Write("Список доступных команд: SetName — вывести, имя SetPassword — Установить пароль, WriteName — вывести имя");
+}
+else if(command == "SetPassword")
+{
+    Console.Write("Введите новый пароль, чтобы изменить его ");
+    password = Console.ReadLine();
+    Console.Clear();
+    Console.Write("Пароль изменен");
+}
+else if(command == "WriteName")
+{
+    Console.Write("Чтобы вывести имя, введите пароль ");
+    string Newpassword = Console.ReadLine();
+    Console.Clear();
+    if(Newpassword == password)
+    {
+        Console.Write("Пароль верный. Молодец, " + Name + "!");
+    }
+    else
+    {
+       Console.Write("Неверный пароль"); 
+    }
+}
+else
+{
+    Console.Write("Неверная команда");
+    
+}
+return;
+}
+Console.Write("Неверный пароль"); 
